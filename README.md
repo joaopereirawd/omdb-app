@@ -7,6 +7,10 @@ Some technologies that I have used:
 - SCSS
 - Axios
 - SRW 
+- CI
+- Vercel deploy
+
+[DEMO APP](omdb-app-tau.vercel.app)
 
 ## Project setup
 
