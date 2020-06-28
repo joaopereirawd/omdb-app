@@ -1,0 +1,21 @@
+/**
+ * IMDB ranking.
+*/
+
+.imdb-rank {
+    position: absolute;
+    top:30px;
+    right: 30px;
+    z-index: 2;
+
+    &__circle {
+        width: 80px;
+        height: 80px;
+        border:4px solid #fff;
+        text-align: center;
+        line-height: 80px;
+        border-radius:50%;
+        font-weight: 800;
+        font-size: calcRem(25px);
+    }
+}
