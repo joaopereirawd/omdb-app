@@ -3,19 +3,19 @@
 */
 
 .imdb-rank {
-    position: absolute;
-    top:30px;
-    right: 30px;
-    z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 2;
 
-    &__circle {
-        width: 80px;
-        height: 80px;
-        border:4px solid #fff;
-        text-align: center;
-        line-height: 80px;
-        border-radius:50%;
-        font-weight: 800;
-        font-size: calcRem(25px);
-    }
+  &__circle {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    font-size: calcRem(25px);
+    font-weight: 800;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 80px;
+  }
 }

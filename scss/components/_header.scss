@@ -2,27 +2,28 @@
  * Header.
  */
 
- .header {
-    position: fixed;
-    width:100%;
-    top:0;
-    left:0;
-    background-color:#131313;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
-    padding:10px 0;
-    z-index: 99;
+.header {
+  background-color: #131313;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+  left: 0;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
 
-        &__wrapper {
-            display: flex;
-            align-items: center;
-            justify-content:center;
-        }
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 
-        &__logo {
-            position: relative;
-            display: flex;
-                > img {
-                    height: 60px;
-                }
-        }
- }
+  &__logo {
+    display: flex;
+    position: relative;
+
+    > img {
+      height: 60px;
+    }
+  }
+}

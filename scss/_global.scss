@@ -1,45 +1,36 @@
 /**
  * Global.
  */
- 
- * {
-    -moz-font-feature-settings: 'liga' 0, 'clig' 0;
-    -webkit-font-feature-settings: 'liga' 0, 'clig' 0;
-    font-feature-settings: 'liga' 0, 'clig' 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-variant-ligatures: no-common-ligatures !important;
-  }
-  
-  ::-moz-selection {
-    background-color: $bold-color;
-  }
-  
-  ::selection {
-    background-color: $bold-color;
-  }
-  
 
-  ::placeholder { 
-    color: $gray ;
-    font-size: calcRem(12px); 
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: .5px;
-  }
-  
-  :-ms-input-placeholder { 
-    color: $gray ;
-    font-size: calcRem(12px); 
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: .5px;
-  }
-  
-  ::-ms-input-placeholder { 
-    color: $gray ;
-    font-size: calcRem(12px); 
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: .5px;
-  }
+* {
+  -moz-font-feature-settings: 'liga' 0, 'clig' 0;
+  -webkit-font-feature-settings: 'liga' 0, 'clig' 0;
+  font-feature-settings: 'liga' 0, 'clig' 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-ligatures: no-common-ligatures !important;
+}
+
+::-moz-selection {
+  background-color: $bold-color;
+}
+
+::selection {
+  background-color: $bold-color;
+}
+
+::placeholder {
+  color: $gray;
+  font-size: calcRem(12px);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+::-ms-input-placeholder {
+  color: $gray;
+  font-size: calcRem(12px);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
