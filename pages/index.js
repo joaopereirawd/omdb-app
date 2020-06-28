@@ -22,7 +22,7 @@ export default function Homepage() {
         const { data } = res;
         if (data.Response != 'False') {
           setMovieStore(res.data.Search);
-
+          console.log(res.data.Search);
         } else {
           setMovieStore([]);
         }
@@ -34,33 +34,56 @@ export default function Homepage() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <input type="text" value={movieTitle} onChange={handleChange} />
-        </label>
-        <input type="submit" value="search" />
-      </form>
-
-      {movieStore.length ?
-        movieStore.map((movie, i) => (
-          <div key={i}>
-            <img src={movieStore[i].Poster} />
-            <h2>{movieStore[i].Title}</h2>
-            <Link
-              href="/movies/[id]"
-              as={`/movies/${movieStore[i].imdbID}`}
-            >
-              <button>ver detalhe</button>
-            </Link>
+    <div className={'movielist'}>
+      <div className={'movielist__form'}>
+        <form onSubmit={handleSubmit}>
+          <div className={'movielist__form-item'}>
+            <div className={'movielist__form-input'}>
+              <input type="text" value={movieTitle} placeholder="Type Spider Man" onChange={handleChange} />
+              <button type="submit"></button>
+            </div>
           </div>
-        ))
-        :
-        <div>
-          Ainda nao procurou pr nenhum filme
-        </div>
-      }
+        </form>
+      </div>
+      <div className={'movielist__wrapper'}>
+        {
+          movieStore.length ?
+            movieStore.map((movie, i) => (
+              <div className={'movielist__wrapper-item'} key={i}>
+                <div className={'movielist__wrapper-item-content'}>
+                  <div className={'movielist__wrapper-item-poster'}>
+                    <img src={movieStore[i].Poster} />
 
+                    <div className={'movielist__wrapper-item-mask'}>
+                      <Link
+                        href="/movies/[id]"
+                        as={`/movies/${movieStore[i].imdbID}`}
+                      >
+                        <div className={'movielist__wrapper-item-mask-link'}>
+                          <button>View details</button>
+                        </div>
+                      </Link>
+
+                      <div className={'movielist__wrapper-item-mask-label'}>
+                        <small>
+                          {movieStore[i].Year}
+                        </small>
+
+                        <h2>
+                          {movieStore[i].Title}
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+            :
+            <div>
+              Ainda nao procurou pr nenhum filme
+            </div>
+        }
+      </div>
     </div>
   );
 }
