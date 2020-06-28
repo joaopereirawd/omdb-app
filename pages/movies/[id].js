@@ -14,7 +14,7 @@ function MovieDetail() {
     const { query } = router;
 
     const { data, error } = useSWR(`https://www.omdbapi.com?i=${query.id}&apikey=${API_KEY}`, fetcher)
-    console.log(data);
+
     if (error) return (
         <div>failed to load</div>
     )
@@ -24,8 +24,74 @@ function MovieDetail() {
     )
 
     return (
-        <div>
-            <img src={data.Poster}></img>
+        <div className={'movie-detail'}>
+            <div className={'movie-detail__wrapper'}>
+                <div className={'movie-detail__cover'}>
+                    <div className={'imdb-rank'}>
+                        <div className={'imdb-rank__circle'}>
+                            {data.imdbRating}
+                        </div>
+                    </div>
+
+                    <div className={'movie-detail__controls'}>
+                        <div className={'movie-detail__controls-wrapper'}>
+                            <div className={'movie-detail__poster'}>
+                                <img src={data.Poster} />
+                            </div>
+
+                            <div className={'movie-detail__description'}>
+                                <h1>
+                                    {data.Title}
+                                </h1>
+
+                                <p>
+                                    {data.Plot}
+                                </p>
+
+                                <p>
+                                    {data.Genre}
+                                </p>
+
+                                <a href={`https://www.imdb.com/title/${data.imdbID}`} target="_blank">Veiw on IMDB</a>
+                            </div>
+
+                            <div className={'movie-detail__info-list'}>
+                                <ul>
+                                    <li>
+                                        <span>Director:</span>
+
+                                        <br></br>
+
+                                        {data.Director}
+                                    </li>
+
+                                    <li>
+                                        <span>Awards:</span>
+
+                                        <br></br>
+
+                                        {data.Awards}
+                                    </li>
+
+                                    <li>
+                                        <span>Actors:</span>
+
+                                        <br></br>
+
+                                        {data.Actors}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={'movie-detail__cover-img'}>
+                        <img src={data.Poster} />
+                    </div>
+
+                    <div className={'movie-detail__cover-bg'}></div>
+                </div>
+            </div>
         </div>
     )
 }
