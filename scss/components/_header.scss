@@ -1,0 +1,22 @@
+/**
+ * Header.
+ */
+
+ .header {
+    background-color: $white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+    padding:10px 0;
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+
+        &__logo {
+            position: relative;
+            display: flex;
+                > img {
+                    height: 60px;
+                }
+        }
+ }
