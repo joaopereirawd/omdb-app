@@ -9,6 +9,7 @@ Some technologies that I have used:
 - SCSS
 - Axios
 - SRW 
+- Stylelint
 - CI
 - Vercel deploy
 
