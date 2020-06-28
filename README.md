@@ -1,5 +1,12 @@
 # omdb-app
-This is an experiment using **nextjs + React** to try getting data from [OMDB API](http://www.omdbapi.com/)
+This is an experiment using **nextjs + React** to getting data from [OMDB API](http://www.omdbapi.com/)
+
+Some technologies that I have used:
+- Nexjs
+- React
+- SCSS
+- Axios
+- SRW 
 
 ## Project setup
 
