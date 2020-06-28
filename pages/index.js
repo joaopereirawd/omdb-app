@@ -1,4 +1,4 @@
-import React, { Component, useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -20,9 +20,9 @@ export default function Homepage() {
       .get(`https://www.omdbapi.com?s=${movieTitle}&apikey=${API_KEY}`)
       .then(res => {
         const { data } = res;
+
         if (data.Response != 'False') {
           setMovieStore(res.data.Search);
-          console.log(res.data.Search);
         } else {
           setMovieStore([]);
         }
@@ -36,15 +36,21 @@ export default function Homepage() {
   return (
     <div className={'movielist'}>
       <div className={'movielist__form'}>
-        <form onSubmit={handleSubmit}>
-          <div className={'movielist__form-item'}>
+        <div className={'movielist__form-item'}>
+          <form onSubmit={handleSubmit}>
             <div className={'movielist__form-input'}>
-              <input type="text" value={movieTitle} placeholder="Type Spider Man" onChange={handleChange} />
+              <input
+                type="text"
+                value={movieTitle}
+                placeholder="Type Spider Man"
+                onChange={handleChange}
+              />
               <button type="submit"></button>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
+
       <div className={'movielist__wrapper'}>
         {
           movieStore.length ?
@@ -80,7 +86,7 @@ export default function Homepage() {
             ))
             :
             <div>
-              Ainda nao procurou pr nenhum filme
+              Faça uma pesquisa.
             </div>
         }
       </div>
