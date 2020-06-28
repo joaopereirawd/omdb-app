@@ -1,6 +1,6 @@
 import React from 'react';
 import App from 'next/app';
-import '../scss/pages/app.scss';
+import '../scss/app.scss';
 import MainLayout from '../layout/main';
 import Header from '../components/header';
 

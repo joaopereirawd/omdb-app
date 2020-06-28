@@ -1,37 +1,10 @@
 // Colors
-$white   : #fff !default;
-$gray    : #c7c7c7 !default;
-$gray-100: #eee !default;
-$gray-200: #dfdfdf !default;
-$gray-300: #c0c0c0 !default;
-$gray-400: #999 !default;
-$gray-500: #777 !default;
-$gray-600: #555 !default;
-$gray-700: #444 !default;
-$gray-800: #333 !default;
-$gray-900: #222 !default;
-$black   : #000 !default;
-
-$blue  : #007bff !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink  : #e83e8c !default;
-$red   : #dc3545 !default;
-$orange: #fd7e14 !default;
-$yellow: #ffc107 !default;
-$green : #28a745 !default;
-$teal  : #20c997 !default;
-$cyan  : #17a2b8 !default;
-
-$primary  : #126ab3 !default;
-$secondary: #6c757d !default;
-$success  : #c2ebdb !default;
-$info     : #b9f0f6 !default;
-$warning  : #fff7d6 !default;
-$danger   : #fcd3d9 !default;
+$white     : #fff !default;
+$gray      : #4c4c4c !default;
+$bold-color: #53489c !default;
 
 // Body.
-$body-bg: #6f42c1 !default;
+$body-bg: #101010 !default;
 $body-color: $white !default;
 
 // Links.
@@ -45,7 +18,6 @@ $paragraph-color: $gray !default;
 
 // Grid columns.
 $grid-gutter-width: 20px !default;
-
 
 // Fonts.
 $font-family-base     : 'Roboto', sans-serif !default;
