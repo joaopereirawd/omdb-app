@@ -14,7 +14,7 @@ function MovieDetail() {
     const { query } = router;
 
     const { data, error } = useSWR(`https://www.omdbapi.com?i=${query.id}&apikey=${API_KEY}`, fetcher)
-
+    console.log(data);
     if (error) return (
         <div>failed to load</div>
     )
