@@ -3,8 +3,10 @@ import axios from 'axios';
 import Link from 'next/link';
 
 export default function Homepage() {
+  const { API_KEY } = process.env;
 
   const [movieTitle, setMovieTitle] = useState('');
+
   const [movieStore, setMovieStore] = useState([]);
 
   const handleChange = event => {
@@ -15,7 +17,7 @@ export default function Homepage() {
     event.preventDefault();
 
     axios
-      .get(`https://www.omdbapi.com?s=${movieTitle}&apikey=c8446168`)
+      .get(`https://www.omdbapi.com?s=${movieTitle}&apikey=${API_KEY}`)
       .then(res => {
         const { data } = res;
         if (data.Response != 'False') {
