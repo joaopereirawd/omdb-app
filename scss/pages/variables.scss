@@ -31,7 +31,7 @@ $warning  : #fff7d6 !default;
 $danger   : #fcd3d9 !default;
 
 // Body.
-$body-bg: $black !default;
+$body-bg: #6f42c1 !default;
 $body-color: $white !default;
 
 // Links.
@@ -48,7 +48,7 @@ $grid-gutter-width: 20px !default;
 
 
 // Fonts.
-$font-family-base     : 'proxima-nova', sans-serif !default;
+$font-family-base     : 'Roboto', sans-serif !default;
 $h1-font-size         : calcRem(40px) !default;
 $h1-font-size-mobile  : calcRem(30px) !default;
 $h2-font-size         : calcRem(30px) !default;
