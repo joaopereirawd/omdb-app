@@ -1,3 +1,5 @@
+![.github/workflows/build.yml](https://github.com/joaopereirawd/omdb-app/workflows/.github/workflows/build.yml/badge.svg)
+
 # omdb-app
 This is an experiment using **nextjs + React** to getting data from [OMDB API](http://www.omdbapi.com/)
 
