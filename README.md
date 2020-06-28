@@ -10,7 +10,7 @@ Some technologies that I have used:
 - CI
 - Vercel deploy
 
-[DEMO APP](omdb-app-tau.vercel.app)
+[DEMO APP](https://omdb-app-tau.vercel.app/)
 
 ## Project setup
 
