@@ -5,16 +5,16 @@ import MainLayout from '../layout/main';
 import Header from '../components/header';
 
 class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
+    render() {
+        const { Component, pageProps } = this.props;
 
-    return (
-      <MainLayout>
-        <Header />
-        <Component {...pageProps} />
-      </MainLayout>
-    );
-  }
+        return (
+            <MainLayout>
+                <Header />
+                <Component {...pageProps} />
+            </MainLayout >
+        );
+    }
 }
 
 export default MyApp;
