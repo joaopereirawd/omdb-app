@@ -65,15 +65,32 @@
       right: 5px;
       top: 50%;
       transform: translateY(-50%);
+      transition: background-color $easeOutExpo 0.7s;
       width: 40px;
+
+      &:hover {
+        background-color: darken($bold-color, 5%);
+      }
     }
   }
 
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     padding: 120px 16px 0 16px;
+  }
+
+  &__wrapper-msg {
+    margin: 0 auto;
+    max-width: 320px;
+    text-align: center;
+    width: 100%;
+
+    > p {
+      color: #434343;
+      font-size: calcRem(11px);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
   }
 
   &__wrapper-item-content {
