@@ -33,4 +33,4 @@ yarn dev
 
 ### Environment variables
 
-Save `.env.example` as `.env` and update the environment variables accordingly. Or you can use this api key if you don't have any **c8446168**
+Save `.env.example` as `.env` and update the environment variables accordingly.
